@@ -18,7 +18,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from users import views
 
@@ -28,5 +28,5 @@ urlpatterns = [
          name ='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), 
         name='token_refresh'),
-    path('users/list/', views.ListUsersView.as_view()),
+    path('', include('users.urls')),
 ]
