@@ -1,4 +1,3 @@
-from turtle import title
 from django.db import models
 
 class Note(models.Model):
