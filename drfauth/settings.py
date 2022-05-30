@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-pebx)$jajjt0pujhjxv3tqd4wp%)0m!m@=uf!2gplqs_)a54am
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com','localhost']
 
 
 # Application definition
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt',
-    'users.apps.UsersConfig',
+    'accounts.apps.AccountsConfig',
     'api.apps.ApiConfig',
 ]
 
@@ -141,6 +141,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+AUTH_USER_MODEL = 'accounts.User'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
