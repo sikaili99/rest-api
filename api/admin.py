@@ -1,3 +1,7 @@
 from django.contrib import admin
+from api.models import Note
 
-# Register your models here.
+class APIAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
+
+admin.site.register(Note, APIAdmin)
