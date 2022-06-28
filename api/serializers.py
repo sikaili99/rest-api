@@ -1,5 +1,3 @@
-from dataclasses import fields
-from pyexpat import model
 from rest_framework.serializers import ModelSerializer
 from api.models import Note
 
